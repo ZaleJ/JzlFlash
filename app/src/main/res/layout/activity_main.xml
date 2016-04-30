@@ -6,4 +6,24 @@
 
 
     <include layout="@layout/ui_flashlight"/>
+    <include layout = "@layout/ui_main"/>
+        <ImageView
+            android:id="@+id/imageview_control"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/control"
+            android:onClick="onClick_Control"/>
+
 </FrameLayout>
+
+
+
+
+
+
+
+
+

@@ -7,10 +7,7 @@ import android.graphics.Point;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 /**
