@@ -80,4 +80,10 @@ public class Flashlight extends BaseActivity{
             }
         }
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        closeFlashlight();
+    }
 }
