@@ -2,7 +2,6 @@ package com.jzlclock.jzl.jzlflash;
 import android.hardware.Camera.Parameters;
 import android.app.Activity;
 import android.hardware.Camera;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -19,11 +18,14 @@ public class BaseActivity extends Activity{
     }
     protected ImageView mImageViewFlashlight;
     protected ImageView mImageViewFlashlightControl;
+    protected ImageView mImageViewWarningLight1;
+    protected ImageView mImageViewWarningLight2;
     protected Camera mCamera;
     protected Parameters mParameters;
 
     protected FrameLayout mUIFlashlight;
     protected LinearLayout mUIMain;
+    protected LinearLayout mUIWarningLight;
 
     protected UIType mCurrentUIType = UIType.UI_TYPE_FLASHLIGHT;
     protected UIType mLastUIType = UIType.UI_TYPE_FLASHLIGHT;
@@ -34,13 +36,19 @@ public class BaseActivity extends Activity{
         setContentView(R.layout.activity_main);
         mUIFlashlight = (FrameLayout)findViewById(R.id.framelayout_flashlight);
         mUIMain = (LinearLayout)findViewById(R.id.linearlayout_main);
+        mUIWarningLight = (LinearLayout) findViewById(R.id.linearlayout_warning_light);
 
         mImageViewFlashlight = (ImageView) findViewById(R.id.im_FlashLight);
         mImageViewFlashlightControl = (ImageView) findViewById(R.id.im_FlashLight_control);
+        mImageViewWarningLight1 = (ImageView) findViewById(R.id.imageview_warning_light1);
+        mImageViewWarningLight2 = (ImageView) findViewById(R.id.imageview_warning_light2);
+
+
     }
     protected void hideAllUI(){
         mUIFlashlight.setVisibility(View.GONE);
         mUIMain.setVisibility(View.GONE);
+        mUIWarningLight.setVisibility(View.GONE);
     }
 }
 
