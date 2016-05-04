@@ -23,6 +23,7 @@ public class BaseActivity extends Activity{
     protected ImageView mImageViewWarningLight1;
     protected ImageView mImageViewWarningLight2;
     protected EditText mEditTextMorseCode;
+    protected ImageView mImageViewBulb;
 
     protected Camera mCamera;
     protected Parameters mParameters;
@@ -31,7 +32,6 @@ public class BaseActivity extends Activity{
     protected LinearLayout mUIMain;
     protected LinearLayout mUIWarningLight;
     protected LinearLayout mUIMorse;
-
 
     protected UIType mCurrentUIType = UIType.UI_TYPE_FLASHLIGHT;
     protected UIType mLastUIType = UIType.UI_TYPE_FLASHLIGHT;
@@ -46,12 +46,14 @@ public class BaseActivity extends Activity{
         mUIMain = (LinearLayout)findViewById(R.id.linearlayout_main);
         mUIWarningLight = (LinearLayout) findViewById(R.id.linearlayout_warning_light);
         mUIMorse = (LinearLayout)findViewById(R.id.linearlayout_morse);
+       // mUIBulb = (FrameLayout)findViewById(R.id.framelayout_bulb);
 
         mImageViewFlashlight = (ImageView) findViewById(R.id.im_FlashLight);
         mImageViewFlashlightControl = (ImageView) findViewById(R.id.im_FlashLight_control);
         mImageViewWarningLight1 = (ImageView) findViewById(R.id.imageview_warning_light1);
         mImageViewWarningLight2 = (ImageView) findViewById(R.id.imageview_warning_light2);
         mEditTextMorseCode = (EditText)findViewById(R.id.editext_morse_code);
+      //  mImageViewBulb = (ImageView)findViewById(R.id.imageview_bulb);
 
         mDefaultScreenBrightness = getScreenBrightness();
 

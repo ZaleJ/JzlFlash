@@ -1,6 +1,7 @@
 package com.jzlclock.jzl.jzlflash;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,7 @@ public class MainActivity extends Morse {
     }
 
 
+
     public void onClick_Control(View view){
         hideAllUI();
         if(mCurrentUIType != UIType.UI_TYPE_MAIN){
@@ -38,6 +40,9 @@ public class MainActivity extends Morse {
             mCurrentUIType = UIType.UI_TYPE_MAIN;
             mWarningLightFlicker = false;
             screenBrightness(mDefaultScreenBrightness / 255f);
+           // if(mBulbCrossFadeFlag)
+           //     mDrawable.reverseTransition(0);
+          //  mBulbCrossFadeFlag = false;
         } else {
             switch (mLastUIType) {
                 case UI_TYPE_FLASHLIGHT:
@@ -55,7 +60,6 @@ public class MainActivity extends Morse {
                     mUIMorse.setVisibility(View.VISIBLE);
                     mCurrentUIType = UIType.UI_TYPE_MORSE;
                     break;
-
                 default:
                     break;
             }

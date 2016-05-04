@@ -8,6 +8,7 @@
     <include layout = "@layout/ui_main"/>
     <include layout="@layout/ui_warminglight"/>
     <include layout="@layout/ui_morse"/>
+
     <ImageView
             android:id="@+id/imageview_control"
             android:layout_width="48dp"
@@ -19,6 +20,18 @@
             android:onClick="onClick_Control"/>
 
 </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
